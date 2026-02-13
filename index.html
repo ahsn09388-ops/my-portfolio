@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ibrahim | CS Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #60a5fa;
+            --primary-hover: #3b82f6;
+            --bg-dark: #0f172a;
+            --card-bg: #1e293b;
+            --text-light: #f8fafc;
+            --text-gray: #94a3b8;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            margin: 0;
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            scroll-behavior: smooth;
+        }
+
+        /* Hero Section */
+        header {
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), 
+                        url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=2070');
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        h1 { font-size: clamp(2.5rem, 8vw, 4rem); margin: 0; color: var(--primary); letter-spacing: -1px; }
+        .subtitle { font-size: 1.5rem; color: var(--text-gray); margin: 15px 0; }
+
+        .btn-cv {
+            background: var(--primary);
+            color: var(--bg-dark);
+            padding: 12px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: 0.3s;
+            display: inline-block;
+        }
+        .btn-cv:hover { background: var(--white); transform: scale(1.05); }
+
+        /* Navigation */
+        nav {
+            background: rgba(30, 41, 59, 0.8);
+            backdrop-filter: blur(10px);
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        nav a { text-decoration: none; color: var(--text-light); font-weight: 500; transition: 0.3s; }
+        nav a:hover { color: var(--primary); }
+
+        .container { max-width: 1100px; margin: auto; padding: 60px 20px; }
+
+        section { padding: 40px 0; }
+        h2 { font-size: 2.2rem; border-left: 5px solid var(--primary); padding-left: 15px; margin-bottom: 40px; }
+
+        /* Education & Skills */
+        .info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
+        .skill-tag { 
+            background: rgba(96, 165, 250, 0.1); 
+            color: var(--primary); 
+            padding: 8px 18px; 
+            border-radius: 50px; 
+            margin: 5px; 
+            display: inline-block;
+            border: 1px solid var(--primary);
+        }
+
+        /* Projects Grid */
+        .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+        .project-card {
+            background: var(--card-bg);
+            border-radius: 15px;
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: 0.3s;
+        }
+        .project-card:hover { transform: translateY(-10px); border-color: var(--primary); }
+        .project-img { width: 100%; height: 200px; object-fit: cover; background: #334155; }
+        .project-body { padding: 25px; }
+        .project-body h3 { color: var(--primary); margin: 0 0 10px 0; }
+        .project-link {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 15px;
+        }
+
+        /* Contact Section */
+        .contact-flex { display: flex; justify-content: center; gap: 30px; font-size: 2rem; }
+        .contact-flex a { color: var(--text-light); transition: 0.3s; }
+        .contact-flex a:hover { color: var(--primary); transform: scale(1.2); }
+
+        footer { text-align: center; padding: 50px; background: #020617; color: var(--text-gray); }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<header>
+    <h1>Ebrahem</h1>
+    <p class="subtitle">Computer Science Student | Data Analytics Enthusiast</p>
+    <a href="CV.pdf" class="btn-cv" download><i class="fas fa-file-download"></i> Download CV</a>
+</header>
+
+<div class="container">
+    
+    <section id="about" class="info-grid">
+        <div>
+            <h2>About Me</h2>
+            <p>I am a tech-driven Computer Science student with a passion for turning raw data into actionable insights. My focus is on Data Science, Algorithms, and building robust software solutions.</p>
+        </div>
+        <div>
+            <h2>Education</h2>
+            <p><strong>Bachelor of Computer Science</strong><br>
+            Major: Information Technology / AI<br>
+            <em>University Name Here</em></p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Technical Skills</h2>
+        <div class="skill-tag">Python (Pandas, Numpy)</div>
+        <div class="skill-tag">Data Visualization (Seaborn)</div>
+        <div class="skill-tag">C++ Programming</div>
+        <div class="skill-tag">SQL & Databases</div>
+        <div class="skill-tag">Bash Scripting</div>
+        <div class="skill-tag">Machine Learning Basics</div>
+    </section>
+
+    <section id="projects">
+        <h2>Featured Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=500" class="project-img" alt="E-commerce Project">
+                <div class="project-body">
+                    <h3>E-commerce Intelligence</h3>
+                    <p>Analyzed 500k+ Kaggle transactions to identify global sales trends and profit margins.</p>
+                    <a href="https://github.com/ahsn09388-ops/E-commerce-Sales-Intelligence" class="project-link" target="_blank"><i class="fab fa-github"></i> View Code</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="C:\Users\Dell\OneDrive\Desktop\portofolio\ronaldo.jpg" class="project-img" alt="Cristiano Ronaldo Analytics">               <div class="project-body">
+                    <h3>CR7 Analytics</h3>
+                    <p>Advanced statistical study of Cristiano Ronaldo's club goals using Python and Seaborn.</p>
+                    <a href="https://github.com/ahsn09388-ops/Ronaldo-analysis" class="project-link" target="_blank"><i class="fab fa-github"></i> View Code</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=500" class="project-img" alt="Real Madrid Project">
+                <div class="project-body">
+                    <h3>Real Madrid Performance</h3>
+                    <p>Visualizing player metrics and historical team performance using data science tools.</p>
+                    <a href="https://github.com/ahsn09388-ops/Real-Madrid-Data-Analysis" class="project-link" target="_blank"><i class="fab fa-github"></i> View Code</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2 style="text-align: center; border: none;">Get In Touch</h2>
+        <div class="contact-flex">
+            <a href="https://github.com/ahsn09388-ops" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/ebrahem-mohamed-bbba742a4/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:ahsn09388@gmail.com" title="Email Me"><i class="fas fa-envelope"></i></a>
+        </div>
+    </section>
+</div>
+
+<footer>
+    <p>Professional Portfolio | Designed by Ibrahim</p>
+    <p>&copy; 2026 | Computer Science Portfolio</p>
+</footer>
+
+</body>
+</html>
